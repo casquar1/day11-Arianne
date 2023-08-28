@@ -15,9 +15,11 @@ const TodoList = () => {
 
     return (
         <div className="container">
-            <h1>Todo List</h1>
-            <TodoGenerator setNewTodo={setNewTodo} />
-            <TodoGroup todos={todos} />
+            <div className="todo-container">
+                <h1>Todo List</h1>
+                <TodoGenerator setNewTodo={setNewTodo} />
+                <TodoGroup todos={todos} />
+            </div>
         </div>
     );
 }

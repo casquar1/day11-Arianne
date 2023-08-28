@@ -1,3 +1,4 @@
+import '../App.css';
 import { useState } from "react";
 
 const TodoGenerator = (props) => {
@@ -15,7 +16,7 @@ const TodoGenerator = (props) => {
     }
 
     return (
-        <div>
+        <div className="todo-item-input">
             <input type="text" placeholder="Add an item..." value={newTodo} onChange={onInputChange} />
             <button onClick={onClickAddTodo} className="add-item-button">Add</button>
         </div>

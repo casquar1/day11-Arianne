@@ -1,7 +1,11 @@
+import '../App.css';
+
 const TodoItem = (props) => {
     return (
         <div className="todo-item">
-            {props.todoItem}
+            <ul>
+                <li>{props.todoItem}</li>
+            </ul>
         </div>
     );
 }

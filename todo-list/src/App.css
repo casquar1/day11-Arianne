@@ -38,6 +38,12 @@
   }
 }
 
+h1 {
+  color: #002765;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -73,5 +79,19 @@ input {
 }
 
 button {
-  border
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.todo-item {
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  word-wrap: break-word
 }
