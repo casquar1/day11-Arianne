@@ -7,6 +7,7 @@ const TodoGenerator = (props) => {
     const onClickAddTodo = () => {
         const newTodo = newTodoRef.current.value;
         if (!newTodo) {
+            alert("Please add an item.");
             return;
         }
         props.setNewTodo(newTodo);
