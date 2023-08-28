@@ -10,7 +10,7 @@ const TodoList = () => {
         if (!newTodo) {
             setTodos([]);
         }
-        setTodos(oldTodos => [...oldTodos, newTodo]);
+        setTodos([...todos, newTodo]);
     }
 
     return (
