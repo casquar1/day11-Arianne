@@ -7,9 +7,6 @@ const TodoList = () => {
     const [todos, setTodos] = useState([]);
 
     const setNewTodo = (newTodo) => {
-        if (!newTodo) {
-            setTodos([]);
-        }
         setTodos([...todos, newTodo]);
     }
 
