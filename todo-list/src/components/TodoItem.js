@@ -1,7 +1,7 @@
-const TodoItem = () => {
+const TodoItem = (props) => {
     return (
-        <div>
-            <div>This is a todo item</div>
+        <div className="todo-item">
+            {props.todoItem}
         </div>
     );
 }

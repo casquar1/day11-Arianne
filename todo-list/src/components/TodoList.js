@@ -1,0 +1,25 @@
+import '../App.css';
+import { useState } from "react";
+import TodoGroup from "./TodoGroup";
+import TodoGenerator from "./TodoGenerator";
+
+const TodoList = () => {
+    const [todos, setTodos] = useState([]);
+
+    const setNewTodo = (newTodo) => {
+        if (!newTodo) {
+            setTodos([]);
+        }
+        setTodos(oldTodos => [...oldTodos, newTodo]);
+    }
+
+    return (
+        <div className="container">
+            <h1>Todo List</h1>
+            <TodoGenerator setNewTodo={setNewTodo} />
+            <TodoGroup todos={todos} />
+        </div>
+    );
+}
+
+export default TodoList;
