@@ -1,23 +1,21 @@
 import '../App.css';
-import { useState } from "react";
+import { useRef } from "react";
 
 const TodoGenerator = (props) => {
-    const [newTodo, setNewTodo] = useState("");
-
-    const onInputChange = (event) => {
-        setNewTodo(event.target.value);
-    };
+    const newTodoRef = useRef();
 
     const onClickAddTodo = () => {
+        const newTodo = newTodoRef.current.value;
         if (!newTodo) {
-            alert("Enter an item.")
+            return;
         }
         props.setNewTodo(newTodo);
+        newTodoRef.current.value = null;
     }
 
     return (
         <div className="todo-item-input">
-            <input type="text" placeholder="Add an item..." value={newTodo} onChange={onInputChange} />
+            <input type="text" placeholder="Add an item..." ref={newTodoRef} />
             <button onClick={onClickAddTodo} className="add-item-button">Add</button>
         </div>
     );
