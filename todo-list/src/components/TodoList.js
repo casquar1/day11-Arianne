@@ -10,7 +10,7 @@ const TodoList = () => {
         <div className="container">
             <div className="todo-container">
                 <h1>Todo List</h1>
-                <TodoGenerator todos={todos} />
+                <TodoGenerator />
                 <TodoGroup todos={todos} />
             </div>
         </div>

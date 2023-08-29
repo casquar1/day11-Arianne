@@ -19,7 +19,7 @@ const TodoGenerator = (props) => {
             text: inputTodo,
             done: false
         };
-        dispatch(addTodo([...props.todos, newTodo]));
+        dispatch(addTodo(newTodo));
         newTodoRef.current.value = null;
     }
 
