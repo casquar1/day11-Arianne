@@ -10,7 +10,8 @@ const todoSlice = createSlice({
             state.todoList.push(action.payload);
         },
         onToggle: (state, action) => {
-            state.todoList[action.payload].done = !state.todoList[action.payload].done;
+            const index = state.todoList[action.payload];
+            index.done = !index.done;
         },
         deleteTodo: (state, action) => {
             state.todoList.splice(action.payload, 1);
