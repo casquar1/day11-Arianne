@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import '../css/TodoItem.css';
-import { onToggle, deleteTodoItem } from "./todoSlice";
+import { onToggle, deleteTodo } from "./todoSlice";
 
 const TodoItem = (props) => {
     const dispatch = useDispatch();
@@ -12,7 +12,7 @@ const TodoItem = (props) => {
     const handleDeleteItem = () => {
         const answer = window.confirm('Are you sure you wish to delete this item?');
         if (answer) {
-            dispatch(deleteTodoItem(props.index))
+            dispatch(deleteTodo(props.index))
         }
     }
 
