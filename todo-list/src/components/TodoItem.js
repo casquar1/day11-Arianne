@@ -1,5 +1,5 @@
-import { useDispatch } from 'react-redux';
 import '../css/TodoItem.css';
+import { useDispatch } from 'react-redux';
 import { onToggle, deleteTodo } from "./todoSlice";
 
 const TodoItem = (props) => {
