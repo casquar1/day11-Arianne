@@ -1,4 +1,4 @@
-import '../App.css';
+import '../css/TodoList.css';
 import { useState } from "react";
 import TodoGroup from "./TodoGroup";
 import TodoGenerator from "./TodoGenerator";

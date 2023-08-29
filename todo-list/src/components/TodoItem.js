@@ -1,4 +1,4 @@
-import '../App.css';
+import '../css/TodoItem.css';
 
 const TodoItem = (props) => {
     return (

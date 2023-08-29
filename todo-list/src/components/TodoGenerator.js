@@ -1,4 +1,4 @@
-import '../App.css';
+import '../css/TodoGenerator.css';
 import { useRef } from "react";
 
 const TodoGenerator = (props) => {
@@ -17,7 +17,7 @@ const TodoGenerator = (props) => {
     return (
         <div className="todo-item-input">
             <input type="text" placeholder="Add an item..." ref={newTodoRef} />
-            <button onClick={onClickAddTodo} className="add-item-button">Add</button>
+            <button onClick={onClickAddTodo}>Add</button>
         </div>
     );
 }
