@@ -1,11 +1,15 @@
 import '../css/TodoGenerator.css';
 import { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "./todoSlice";
 
 const TodoGenerator = (props) => {
     const newTodoRef = useRef();
+    const dispatch = useDispatch();
 
     const onClickAddTodo = () => {
         const inputTodo = newTodoRef.current.value;
+
         if (!inputTodo) {
             alert("Please add an item.");
             return;
@@ -15,7 +19,7 @@ const TodoGenerator = (props) => {
             text: inputTodo,
             done: false
         };
-        props.setNewTodo(newTodo);
+        dispatch(addTodo(newTodo));
         newTodoRef.current.value = null;
     }
 
