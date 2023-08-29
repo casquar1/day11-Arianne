@@ -19,7 +19,7 @@ const TodoItem = (props) => {
     return (
         <div className="todo-item">
             <span className={props.done ? "done" : ""} onClick={handleOnToggle}>{props.todoItem}</span>
-            <button className="delete-item" onClick={handleDeleteItem}>x</button>
+            <button className="delete-item" onClick={handleDeleteItem}>X</button>
         </div>
     );
 }

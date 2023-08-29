@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "./todoSlice";
 
-const TodoGenerator = (props) => {
+const TodoGenerator = () => {
     const newTodoRef = useRef();
     const dispatch = useDispatch();
 
