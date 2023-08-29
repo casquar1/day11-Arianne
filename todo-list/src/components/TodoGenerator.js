@@ -9,16 +9,16 @@ const TodoGenerator = () => {
 
     const onClickAddTodo = () => {
         const inputTodo = newTodoRef.current.value;
-
-        if (!inputTodo) {
-            alert("Please add an item.");
-            return;
-        }
         const newTodo = {
             id: Date.now(),
             text: inputTodo,
             done: false
         };
+
+        if (!inputTodo) {
+            alert("Please add an item.");
+            return;
+        }
         dispatch(addTodo(newTodo));
         newTodoRef.current.value = null;
     }
