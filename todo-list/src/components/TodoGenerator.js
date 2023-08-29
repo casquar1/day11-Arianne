@@ -23,9 +23,15 @@ const TodoGenerator = () => {
         newTodoRef.current.value = null;
     }
 
+    const handleKeyDown = (event) => {
+        if (event.key === "Enter") {
+            onClickAddTodo();
+        }
+    }
+
     return (
         <div className="todo-item-input">
-            <input type="text" placeholder="Add an item..." ref={newTodoRef} />
+            <input type="text" placeholder="Add an item..." ref={newTodoRef} onKeyDown={handleKeyDown} />
             <button onClick={onClickAddTodo}>Add</button>
         </div>
     );
