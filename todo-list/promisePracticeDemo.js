@@ -3,7 +3,7 @@ const successPromise = new Promise((resolve, rejected) => {
         resolve("This will be printed.");
     }, 1000);
     setTimeout(() => {
-        rejected("This will not be printed.")
+        rejected("This will not be printed.");
     }, 2000);
 });
 
@@ -19,7 +19,7 @@ const failedPromise = new Promise((resolve, rejected) => {
         resolve("This will not be printed.");
     }, 2000);
     setTimeout(() => {
-        rejected("This will be printed.")
+        rejected("This will be printed.");
     }, 1000);
 });
 
