@@ -4,6 +4,7 @@ import { onToggle, deleteTodo } from "./todoSlice";
 
 const TodoItem = (props) => {
     const dispatch = useDispatch();
+    const itemClassName = props.done ? "done" : "";
 
     const handleOnToggle = () => {
         dispatch(onToggle(props.index))
@@ -18,7 +19,7 @@ const TodoItem = (props) => {
 
     return (
         <div className="todo-item">
-            <span className={props.done ? "done" : ""} onClick={handleOnToggle}>{props.todoItem}</span>
+            <span className={itemClassName} onClick={handleOnToggle}>{props.todoItem}</span>
             <button className="delete-item" onClick={handleDeleteItem}>X</button>
         </div>
     );
