@@ -20,6 +20,11 @@
     cursor: pointer;
     border-radius: 40px;
     justify-content: space-between;
+    opacity: 30%;
+}
+
+.delete-item:hover {
+    opacity: 80%;
 }
 
 .done {
