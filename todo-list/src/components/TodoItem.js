@@ -3,9 +3,10 @@ import '../css/TodoItem.css';
 const TodoItem = (props) => {
     return (
         <div className="todo-item">
-            <ul>
-                <li>{props.todoItem}</li>
-            </ul>
+            <li>{props.todoItem.text}
+                <span>{props.todoItem.done}</span>
+                <span><button>x</button></span>
+            </li>
         </div>
     );
 }

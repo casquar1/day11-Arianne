@@ -5,11 +5,16 @@ const TodoGenerator = (props) => {
     const newTodoRef = useRef();
 
     const onClickAddTodo = () => {
-        const newTodo = newTodoRef.current.value;
-        if (!newTodo) {
+        const inputTodo = newTodoRef.current.value;
+        if (!inputTodo) {
             alert("Please add an item.");
             return;
         }
+        const newTodo = {
+            id: Date.now(),
+            text: inputTodo,
+            done: false
+        };
         props.setNewTodo(newTodo);
         newTodoRef.current.value = null;
     }

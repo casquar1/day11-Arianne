@@ -1,8 +1,9 @@
 import TodoItem from "./TodoItem";
 
 const TodoGroup = (props) => {
-    return props.todos.map((item, index) => {
-        return <TodoItem key={index} todoItem={item} />
+
+    return props.todos.map((item) => {
+        return <TodoItem key={item.id} todoItem={item} />
     });
 }
 
