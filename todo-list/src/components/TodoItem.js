@@ -1,6 +1,6 @@
 import '../css/TodoItem.css';
 import { useDispatch } from 'react-redux';
-import { deleteTodo, resetTodoItem } from "./todoSlice";
+import { resetTodoItem } from "./todoSlice";
 import * as todoApi from "../api/todoApi";
 
 const TodoItem = (props) => {

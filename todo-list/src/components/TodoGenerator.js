@@ -1,13 +1,14 @@
 import '../css/TodoGenerator.css';
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "./todoSlice";
+import { resetTodoItem } from "./todoSlice";
+import * as todoApi from "../api/todoApi";
 
 const TodoGenerator = () => {
     const newTodoRef = useRef();
     const dispatch = useDispatch();
 
-    const onClickAddTodo = () => {
+    const onClickAddTodo = async () => {
         const inputTodo = newTodoRef.current.value;
         const newTodo = {
             id: Date.now(),
@@ -19,7 +20,9 @@ const TodoGenerator = () => {
             alert("Please add an item.");
             return;
         }
-        dispatch(addTodo(newTodo));
+        await todoApi.addTodoItem(newTodo);
+        const response = await todoApi.getTodoItems();
+        dispatch(resetTodoItem(response.data));
         newTodoRef.current.value = null;
     }
 
