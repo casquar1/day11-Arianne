@@ -1,7 +1,7 @@
 import '../css/TodoList.css';
 import TodoGroup from "./TodoGroup";
 import TodoGenerator from "./TodoGenerator";
-import * as todoApi from "../api/todoApi"
+import * as todoApi from "../api/todoApi";
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { resetTodoItem } from "./todoSlice";

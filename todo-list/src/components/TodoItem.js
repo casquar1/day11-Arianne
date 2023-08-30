@@ -1,17 +1,16 @@
 import '../css/TodoItem.css';
 import { useDispatch } from 'react-redux';
-import { onToggle, deleteTodo } from "./todoSlice";
+import { deleteTodo, resetTodoItem } from "./todoSlice";
+import * as todoApi from "../api/todoApi";
 
 const TodoItem = (props) => {
     const dispatch = useDispatch();
     const itemClassName = props.todoItem.done ? "done" : "";
 
-    const handleOnToggle = () => {
-        if (props.isDone) {
-            console.log("Go to details page");
-        } else {
-            dispatch(onToggle(props.todoItem.id))
-        }
+    const handleOnToggle = async () => {
+        await todoApi.updateTodoItem(props.todoItem.id, { done: !props.todoItem.done });
+        const response = await todoApi.getTodoItems();
+        dispatch(resetTodoItem(response.data));
     }
 
     const handleDeleteItem = () => {
