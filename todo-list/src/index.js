@@ -16,10 +16,7 @@ const router = createBrowserRouter([{
   children: [
     { index: true, element: <TodoList /> },
     { path: "/help", element: <HelpPage /> },
-    {
-      path: "/done", element: <TodoList isDone={true} />
-
-    },
+    { path: "/done", element: <TodoList isDone={true} /> },
   ]
 },
 ]);
