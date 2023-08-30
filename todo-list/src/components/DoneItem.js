@@ -22,7 +22,7 @@ const DoneItem = (props) => {
     return (
         <div>
             <span className={itemClassName} onClick={handleOnToggle}>{props.todoItem.text}</span>
-            <DeleteOutlined className="delete-icon" onClick={handleDeleteItem} />
+            <p><DeleteOutlined className="delete-icon" onClick={handleDeleteItem} /></p>
         </div>
     );
 }
