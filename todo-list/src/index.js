@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HelpPage } from './pages/HelpPage';
+import ErrorPage from "./pages/ErrorPage";
 import TodoList from './components/TodoList';
 import DoneList from './components/DoneList';
 
@@ -14,10 +15,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([{
   path: "/",
   element: <App />,
+  errorElement: <ErrorPage />,
   children: [
     { index: true, element: <TodoList /> },
-    { path: "/help", element: <HelpPage /> },
     { path: "/done", element: <DoneList /> },
+    { path: "/help", element: <HelpPage /> },
   ]
 },
 ]);
