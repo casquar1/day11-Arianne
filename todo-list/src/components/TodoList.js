@@ -1,10 +1,19 @@
 import '../css/TodoList.css';
 import TodoGroup from "./TodoGroup";
 import TodoGenerator from "./TodoGenerator";
-import { useSelector } from 'react-redux';
+import * as todoApi from "../api/todoApi"
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { resetTodoItem } from "./todoSlice";
 
 const TodoList = (props) => {
+    const dispatch = useDispatch();
     const todos = useSelector((state) => state.todo.todoList);
+    useEffect(() => {
+        todoApi.getTodoItems().then(response => {
+            dispatch(resetTodoItem(response.data))
+        });
+    }, []);
 
     return (
         <div className="container">
