@@ -10,9 +10,11 @@ const TodoList = (props) => {
     const dispatch = useDispatch();
     const todos = useSelector((state) => state.todo.todoList);
     useEffect(() => {
-        todoApi.getTodoItems().then(response => {
+        async function fetchData() {
+            const response = await todoApi.getTodoItems();
             dispatch(resetTodoItem(response.data))
-        });
+        }
+        fetchData();
     }, []);
 
     return (
