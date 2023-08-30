@@ -8,7 +8,7 @@ const DoneList = () => {
     return (
         <div className="container">
             <div className="todo-container">
-                <h1>"Done Items"</h1>
+                <h1>"Done List"</h1>
                 <DoneGroup todos={todos} />
             </div>
         </div>

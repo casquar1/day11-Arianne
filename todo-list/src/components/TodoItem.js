@@ -8,9 +8,6 @@ const TodoItem = (props) => {
     const itemClassName = props.todoItem.done ? "done" : "";
 
     const handleOnToggle = async () => {
-        if (props.isDone) {
-            return;
-        }
         await todoApi.updateTodoItem(props.todoItem.id, { done: !props.todoItem.done });
         const response = await todoApi.getTodoItems();
         dispatch(resetTodoItem(response.data));

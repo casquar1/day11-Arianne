@@ -1,10 +1,10 @@
 import DoneItem from "./DoneItem";
 
 const DoneGroup = (props) => {
-    const todos = props.isDone ? props.todos.filter((item) => item.done) : props.todos;
+    const todos = props.todos.filter((item) => item.done);
 
     return todos.map((item) => {
-        return <DoneItem key={item.id} todoItem={item} isDone={props.isDone} />
+        return <DoneItem key={item.id} todoItem={item} />
     });
 }
 
