@@ -27,8 +27,10 @@ const TodoItem = (props) => {
     return (
         <div>
             <span className={itemClassName} onClick={handleOnToggle}>{props.todoItem.text}</span>
-            <EditOutlined onClick={handleUpdateItem} />
-            <DeleteOutlined onClick={handleDeleteItem} />
+            <p>
+                <EditOutlined onClick={handleUpdateItem} />
+                <DeleteOutlined onClick={handleDeleteItem} />
+            </p>
             <EditFormModal
                 showModal={isModalOpen}
                 closeModal={handleUpdateItem}
