@@ -1,7 +1,7 @@
 import '../css/TodoList.css';
 import TodoGroup from "./TodoGroup";
 import TodoGenerator from "./TodoGenerator";
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useTodos } from './../hooks/useTodos';
 
@@ -13,7 +13,7 @@ const TodoList = () => {
     return (
         <div className="container">
             <div className="todo-container">
-                <h1>"Todo List"</h1>
+                <h1>Todo List</h1>
                 <TodoGenerator />
                 <TodoGroup todos={todos} />
             </div>

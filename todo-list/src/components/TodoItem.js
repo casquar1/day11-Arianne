@@ -1,5 +1,5 @@
 import '../css/TodoItem.css';
-import { useDispatch } from 'react-redux';
+import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { useTodos } from './../hooks/useTodos';
 
 const TodoItem = (props) => {
@@ -18,9 +18,10 @@ const TodoItem = (props) => {
     }
 
     return (
-        <div className="todo-item">
+        <div>
             <span className={itemClassName} onClick={handleOnToggle}>{props.todoItem.text}</span>
-            <button className="delete-item" onClick={handleDeleteItem}>X</button>
+            <EditOutlined className="edit-icon" />
+            <DeleteOutlined className="delete-icon" onClick={handleDeleteItem} />
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { deleteTodoItem } from "../api/todoApi";
 import { useNavigate } from 'react-router-dom';
+import { DeleteOutlined } from "@ant-design/icons";
 
 const DoneItem = (props) => {
     const itemClassName = props.todoItem.done ? "done" : "";
@@ -19,9 +20,9 @@ const DoneItem = (props) => {
     };
 
     return (
-        <div className="todo-item">
+        <div>
             <span className={itemClassName} onClick={handleOnToggle}>{props.todoItem.text}</span>
-            <button className="delete-item" onClick={handleDeleteItem}>X</button>
+            <DeleteOutlined className="delete-icon" onClick={handleDeleteItem} />
         </div>
     );
 }
