@@ -7,7 +7,11 @@ const TodoItem = (props) => {
     const itemClassName = props.todoItem.done ? "done" : "";
 
     const handleOnToggle = () => {
-        dispatch(onToggle(props.todoItem.id))
+        if (props.isDone) {
+            console.log("Go to details page");
+        } else {
+            dispatch(onToggle(props.todoItem.id))
+        }
     }
 
     const handleDeleteItem = () => {
