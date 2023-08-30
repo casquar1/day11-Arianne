@@ -7,12 +7,10 @@ const TodoList = () => {
     const todos = useSelector((state) => state.todo.todoList);
 
     return (
-        <div className="container">
-            <div className="todo-container">
-                <h1>Todo List</h1>
-                <TodoGenerator />
-                <TodoGroup todos={todos} />
-            </div>
+        <div className="todo-container">
+            <h1>Todo List</h1>
+            <TodoGenerator />
+            <TodoGroup todos={todos} />
         </div>
     );
 }
