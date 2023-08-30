@@ -1,5 +1,9 @@
+import '../css/HelpPage.css';
+
 export const HelpPage = () => {
     return (
-        "This is a help page"
+        <div className="help-page">
+            <h1>This is Help Page</h1>
+        </div>
     );
 }
