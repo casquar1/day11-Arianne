@@ -10,23 +10,6 @@
     margin-bottom: 25px;
 }
 
-.delete-item {
-    border: none;
-    outline: none;
-    padding: 16px 50px;
-    background: red;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 40px;
-    justify-content: space-between;
-    opacity: 30%;
-}
-
-.delete-item:hover {
-    opacity: 80%;
-}
-
 .done {
     text-decoration: line-through;
 }
