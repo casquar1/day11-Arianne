@@ -12,6 +12,6 @@ export const deleteTodoItem = (id) => {
     return api.delete(`/todos/${id}`);
 }
 
-export const addTodoItem = (newTodo) => {
-    return api.post("/todos", newTodo);
+export const addTodoItem = (text) => {
+    return api.post("/todos", text);
 }
