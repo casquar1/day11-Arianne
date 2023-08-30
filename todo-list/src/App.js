@@ -7,8 +7,8 @@ function App() {
       <div className="nav-bar">
         <nav>
           <ul>
-            <li><NavLink to={"/"}>Home</NavLink></li>
-            <li><NavLink to={"/done"}>Done List</NavLink></li>
+            <li><NavLink to={"/"}>Home &nbsp;&nbsp;&nbsp;|</NavLink></li>
+            <li><NavLink to={"/done"}>Done List &nbsp;&nbsp;&nbsp;&nbsp;|</NavLink></li>
             <li><NavLink to={"/help"}>Help</NavLink></li>
           </ul>
         </nav>
