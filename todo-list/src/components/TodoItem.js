@@ -13,10 +13,12 @@ const TodoItem = (props) => {
         dispatch(resetTodoItem(response.data));
     }
 
-    const handleDeleteItem = () => {
+    const handleDeleteItem = async () => {
         const answer = window.confirm('Are you sure you wish to delete this item?');
         if (answer) {
-            dispatch(deleteTodo(props.todoItem.id))
+            await todoApi.deleteTodoItem(props.todoItem.id);
+            const response = await todoApi.getTodoItems();
+            dispatch(resetTodoItem(response.data));
         }
     }
 

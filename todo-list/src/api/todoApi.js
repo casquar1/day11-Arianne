@@ -7,3 +7,7 @@ export const getTodoItems = () => {
 export const updateTodoItem = (id, todoItem) => {
     return api.put(`/todos/${id}`, todoItem);
 }
+
+export const deleteTodoItem = (id) => {
+    return api.delete(`/todos/${id}`);
+}
