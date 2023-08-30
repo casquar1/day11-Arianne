@@ -15,7 +15,7 @@ const TodoGenerator = () => {
             done: false
         };
 
-        if (!inputTodo) {
+        if (!inputTodo.trim()) {
             alert("Please add an item.");
             return;
         }
