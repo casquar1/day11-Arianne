@@ -4,3 +4,23 @@
     background: linear-gradient(135deg, #153677, #4e085f);
     padding: 10px;
 }
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.detail-container {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+}

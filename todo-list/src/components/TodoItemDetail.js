@@ -8,9 +8,13 @@ const TodoItemDetail = () => {
 
     return (
         <div className="page">
-            <h1>Todo Item Detail</h1>
-            <div>{todos.id}</div>
-            <div>{todos.text}</div>
+            <div className="container">
+                <div className="detail-container">
+                    <h1>Todo Item Detail</h1>
+                    <div><h2>ID: {todos.id}</h2></div>
+                    <div><h2>Text: {todos.text}</h2></div>
+                </div>
+            </div>
         </div>
     );
 }
