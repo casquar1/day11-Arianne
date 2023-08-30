@@ -1,13 +1,20 @@
 import '../css/TodoItem.css';
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { useTodos } from './../hooks/useTodos';
+import EditFormModal from './EditFormModal';
+import { useState } from 'react';
 
 const TodoItem = (props) => {
     const { toggleTodo, deleteTodo } = useTodos();
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const itemClassName = props.todoItem.done ? "done" : "";
 
     const handleOnToggle = async () => {
         toggleTodo(props.todoItem.id, props.todoItem);
+    }
+
+    const handleUpdateItem = () => {
+        setIsModalOpen(!isModalOpen);
     }
 
     const handleDeleteItem = async () => {
@@ -20,8 +27,13 @@ const TodoItem = (props) => {
     return (
         <div>
             <span className={itemClassName} onClick={handleOnToggle}>{props.todoItem.text}</span>
-            <EditOutlined className="edit-icon" />
-            <DeleteOutlined className="delete-icon" onClick={handleDeleteItem} />
+            <EditOutlined onClick={handleUpdateItem} />
+            <DeleteOutlined onClick={handleDeleteItem} />
+            <EditFormModal
+                showModal={isModalOpen}
+                closeModal={handleUpdateItem}
+                todoItem={props.todoItem}
+            />
         </div>
     );
 }

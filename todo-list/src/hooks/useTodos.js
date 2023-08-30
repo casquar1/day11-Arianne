@@ -25,10 +25,16 @@ export const useTodos = () => {
         loadTodos();
     }
 
+    async function updateTodo(id, item) {
+        await todoApi.updateTodoItem(id, { text: item.text });
+        loadTodos();
+    }
+
     return {
         loadTodos,
         addTodo,
         toggleTodo,
-        deleteTodo
+        deleteTodo,
+        updateTodo
     }
 }
