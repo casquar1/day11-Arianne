@@ -9,7 +9,7 @@ const TodoList = (props) => {
     return (
         <div className="container">
             <div className="todo-container">
-                <h1>Todo List</h1>
+                <h1>{props.isDone ? "Done Items" : "Todo List"}</h1>
                 {!props.isDone && <TodoGenerator />}
                 <TodoGroup todos={todos} isDone={props.isDone} />
             </div>
