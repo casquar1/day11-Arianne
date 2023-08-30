@@ -3,15 +3,15 @@ import TodoGroup from "./TodoGroup";
 import TodoGenerator from "./TodoGenerator";
 import { useSelector } from 'react-redux';
 
-const TodoList = () => {
+const TodoList = (props) => {
     const todos = useSelector((state) => state.todo.todoList);
 
     return (
         <div className="container">
             <div className="todo-container">
                 <h1>Todo List</h1>
-                <TodoGenerator />
-                <TodoGroup todos={todos} />
+                {!props.done && <TodoGenerator />}
+                <TodoGroup todos={todos} isDone={props.isDone} />
             </div>
         </div>
     );
