@@ -65,3 +65,17 @@
   color: #000;
   justify-content: center;
 }
+
+nav>ul>li {
+  padding: 20px;
+  list-style: none;
+}
+
+nav>ul {
+  padding: 0px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
